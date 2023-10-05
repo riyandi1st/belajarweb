@@ -1,50 +1,70 @@
----
-title: "Nama Anda - Personal Brand"
-description: "Deskripsi singkat tentang Anda"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deskripsi singkat tentang Anda">
+    <title>Nama Anda - Personal Brand</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Tambahkan gaya tambahan di sini jika diperlukan */
+        body {
+            background-color: black;
+            color: gold;
+        }
+        .bg-gold {
+            background-color: gold;
+        }
+        .text-gold {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-black text-center py-12">
+        <h1 class="text-3xl font-bold">Selamat Datang di Situs Saya</h1>
+        <p>Saya adalah <strong class="text-gold">Nama Anda</strong>, dan saya <em>pekerjaan Anda</em>.</p>
+    </header>
 
-<astro-meta
-  title="{title}"
-  description="{description}"
-/>
+    <section class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-gold">Tentang Saya</h2>
+            <p>Deskripsi singkat tentang Anda dan latar belakang Anda.</p>
+        </div>
+    </section>
 
-<astro-head>
-  <!-- Tambahkan tag <link> atau <meta> tambahan di sini jika diperlukan -->
-</astro-head>
+    <section class="bg-gold py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-black">Portofolio</h2>
+            <!-- Daftar proyek atau karya Anda di sini -->
+            <ul>
+                <li class="py-4">
+                    <h3 class="text-xl font-semibold">Nama Proyek 1</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </li>
+                <li class="py-4">
+                    <h3 class="text-xl font-semibold">Nama Proyek 2</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </li>
+                <!-- Tambahkan proyek lainnya sesuai kebutuhan -->
+            </ul>
+        </div>
+    </section>
 
-<astro-body>
-  <header>
-    <h1>Selamat Datang di Situs Saya</h1>
-    <p>Saya adalah <strong>Nama Anda</strong>, dan saya <em>pekerjaan Anda</em>.</p>
-  </header>
+    <section class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-gold">Kontak</h2>
+            <p>Anda dapat menghubungi saya melalui email di <a href="mailto:email@example.com" class="text-gold">email@example.com</a>.</p>
+        </div>
+    </section>
 
-  <section>
-    <h2>Tentang Saya</h2>
-    <p>Deskripsi singkat tentang Anda dan latar belakang Anda.</p>
-  </section>
+    <footer class="bg-black text-center py-4">
+        <p class="text-gold">© <span id="currentYear"></span> Nama Anda</p>
+    </footer>
 
-  <section>
-    <h2>Portofolio</h2>
-    <!-- Daftar proyek atau karya Anda di sini -->
-    <ul>
-      <li>
-        <h3>Nama Proyek 1</h3>
-        <p>Deskripsi singkat tentang proyek ini.</p>
-      </li>
-      <li>
-        <h3>Nama Proyek 2</h3>
-        <p>Deskripsi singkat tentang proyek ini.</p>
-      </li>
-      <!-- Tambahkan proyek lainnya sesuai kebutuhan -->
-    </ul>
-  </section>
-
-  <section>
-    <h2>Kontak</h2>
-    <p>Anda dapat menghubungi saya melalui email di <a href="mailto:email@example.com">email@example.com</a>.</p>
-  </section>
-
-  <footer>
-    <p>© {new Date().getFullYear()} Nama Anda</p>
-  </footer>
-</astro-body>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+    </script>
+</body>
+</html>
